@@ -37,7 +37,7 @@ setup(
         'packaging>=23.1',
         'pandas>=1.4.1',
         'progressbar33>=2.4',
-        'protobuf>=3.20.*',
+        'protobuf>=3.19.*',
         'resampy>=0.4.2',
         'scikit_image>=0.19.3',
         'scikit_learn>=1.2.2',
