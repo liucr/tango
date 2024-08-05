@@ -1,7 +1,52 @@
-import os
-requirement_path = "requirements.txt"
-install_requires = []
-if os.path.isfile(requirement_path):
-    with open(requirement_path) as f:
-        install_requires = f.read().splitlines()
-setup(name="mypackage", install_requires=install_requires, [...])
+from setuptools import setup, find_packages
+
+setup(
+    name="tangolib",
+    version="0.1.0",
+    author="Declare Lab",
+    description="A shared library for audio processing and machine learning tasks",
+    long_description=open('README.md').read(),
+    long_description_content_type="text/markdown",
+    url="https://github.com/liucr/tango",
+    packages=find_packages(),
+    py_modules=["tango"],  # This ensures tango.py is included
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "Operating System :: OS Independent",
+        "Intended Audience :: Developers",
+        "Topic :: Software Development :: Libraries",
+        "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    ],
+    python_requires='>=3.6',
+    install_requires=[
+        'torch>=1.13.1',
+        'torchaudio>=0.13.1',
+        'torchvision>=0.14.1',
+        'transformers>=4.27.0',
+        'accelerate>=0.18.0',
+        'datasets==2.1.0',
+        'diffusers>=0.18.2',
+        'einops>=0.6.1',
+        'h5py>=3.8.0',
+        'huggingface_hub>=0.13.3',
+        'importlib_metadata>=6.3.0',
+        'librosa>=0.9.2',
+        'matplotlib>=3.5.2',
+        'numpy>=1.23.0',
+        'omegaconf>=2.3.0',
+        'packaging>=23.1',
+        'pandas>=1.4.1',
+        'progressbar33>=2.4',
+        'protobuf>=3.20.*',
+        'resampy>=0.4.2',
+        'scikit_image>=0.19.3',
+        'scikit_learn>=1.2.2',
+        'scipy>=1.8.0',
+        'soundfile>=0.12.1',
+        'ssr_eval>=0.0.6',
+        'torchlibrosa>=0.1.0',
+        'tqdm>=4.63.1',
+        'wandb>=0.12.14',
+        'ipython>=8.12.0',
+    ],
+)
