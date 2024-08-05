@@ -9,11 +9,6 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/liucr/tango",
     packages=find_packages(),
-    py_modules=[
-        "tango",
-        "models",
-        "inference",
-    ],  # This ensures tango.py is included
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
